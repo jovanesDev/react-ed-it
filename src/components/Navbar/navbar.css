@@ -1,0 +1,19 @@
+
+.nav_container {
+    margin-bottom: 50px;
+}
+
+nav {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: beige;
+    padding: 20px;
+}
+
+
+ul {
+    display: flex;
+    gap: 40px;
+}
