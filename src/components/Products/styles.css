@@ -2,3 +2,15 @@
   display: flex;
   gap: 30px;
 }
+
+.bg-light {
+  background-color: #ffffff;
+}
+
+.bg-dark {
+  background-color: #1a1b1a;
+}
+
+.bg-neutro {
+  background-color: #00ff00;
+}
