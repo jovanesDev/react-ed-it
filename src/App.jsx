@@ -1,14 +1,10 @@
-
-import WithNavbarAndFooter from "./layout/WithNavbarAndFooter";
-import Products from "./components/Products/Products";
+import Routing from "./routes/Routing";
 
 function App() {
   //todo aca falta la logica de calcular
   return (
     <div>
-        <WithNavbarAndFooter>
-          <Products/>
-        </WithNavbarAndFooter>
+      <Routing />
     </div>
   );
 }
