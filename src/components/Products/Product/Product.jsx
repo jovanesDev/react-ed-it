@@ -3,10 +3,12 @@ import TextComponent from "../../../shared/TextComponent/TextComponent";
 import Counter from "../../Counter/Counter";
 import { colorDicider } from "../../../helpers/colorDicider";
 import "./styles.css";
+import { useNavigate } from "react-router-dom";
 
 const Product = (props) => {
-  const { name, marca, img, precio, disponible, descuento, stock } = props;
+  const { name, marca, img, precio, disponible, descuento, stock,id} = props;
   const className = colorDicider(descuento);
+  const navigate = useNavigate()
 
   return (
     <div className="product_container">
@@ -25,6 +27,7 @@ const Product = (props) => {
       />
      { disponible && <TextComponent text={`Stock : ${stock}`} />}
     { disponible && <Counter stock={stock} disponible={disponible} producto={props}/>}
+      <button onClick={() => navigate(`/product/${id}`)}>Ver mas</button>
     </div>
   );
 };

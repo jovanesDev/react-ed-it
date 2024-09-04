@@ -9,8 +9,12 @@ const Navbar = (props) => {
   const { logoText } = props;
   
   const navigate = useNavigate();
-  const location = useLocation();
-  console.log(location)
+  // COMO SACAR LOS QUERYS de la URL 
+  // console.log(window.location,'window.location')
+  // const urlData = new URLSearchParams(window.location.search)
+  // console.log(urlData,'url data')
+  // const params = Object.fromEntries(urlData.entries());
+  // console.log(params,'params')
 
   return (
     <div className="nav_container">

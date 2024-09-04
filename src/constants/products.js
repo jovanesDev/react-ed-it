@@ -7,7 +7,21 @@ export const products = [
     precio: 1500,
     disponible: true,
     descuento:null,
-    stock:10
+    stock:10,
+    bancos:[
+      {
+        nombre:'Santander',
+        cuotas:'18'
+      },
+      {
+        nombre:'Nacion',
+        cuotas:'12'
+      },
+      {
+        nombre:'Galicia',
+        cuotas:'6'
+      }
+    ]
   },
   {
     id: 2,
@@ -17,7 +31,17 @@ export const products = [
     precio: 1500,
     disponible: true,
     descuento:51,
-    stock:5
+    stock:5,
+    bancos:[
+      {
+        nombre:'Nacion',
+        cuotas:'12'
+      },
+      {
+        nombre:'Galicia',
+        cuotas:'6'
+      }
+    ]
   },
   {
     id: 3,
@@ -25,8 +49,14 @@ export const products = [
     marca: "Puma",
     img: "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/389390/05/sv01/fnd/PER/fmt/png/Zapatillas-Carina-Street-para-mujer",
     precio: 700,
-    disponible: false,
+    disponible: true,
     descuento:null,
-    stock:0
+    stock:12,
+    bancos:[
+      {
+        nombre:'Galicia',
+        cuotas:'6'
+      }
+    ]
   },
 ];
