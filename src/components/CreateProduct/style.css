@@ -5,3 +5,7 @@ form {
     width: 50%;
     margin: 0 auto;
 }
+
+error {
+    border: 1px solid red;
+}

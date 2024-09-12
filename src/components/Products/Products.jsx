@@ -7,6 +7,7 @@ import "./styles.css";
 import CreateProduct from "../CreateProduct/CreateProduct";
 
 const Products = () => {
+  //! COMPONENTE INTELIGENTE 
   //bgStyleTypes.neutro => bg-neutro
   //bgStyleTypes["neutro"] => bg-neutro
   // const {neutro} = bgStyleTypes

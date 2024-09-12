@@ -10,16 +10,11 @@ const Product = () => {
   if(!producto){
     return <Navigate to="/producto-inexistente" />
   }
-
   if(producto){
     console.log('esto es el producto',producto)
   }
   // 1 y '1' 
-
   // {name:Profe}
-
-
-
   return (
     <div>
       <h1>Detalle del Producto</h1>

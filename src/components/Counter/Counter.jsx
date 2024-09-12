@@ -1,29 +1,12 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
 import CustomBtn from "../../shared/CustomButton/CustomBtn";
 import TextComponent from "../../shared/TextComponent/TextComponent";
 import "./styles.css";
+import useCounter from "../../hooks/useCounter";
 
 const Counter = (props) => {
   const { stock, producto, disponible } = props;
-  const [contador, setContador] = useState(0);
-
-  const handleSumar = () => {
-    if (contador < stock) {
-      setContador(contador + 1);
-    }
-  };
-  const handleRestar = () => {
-    if (contador > 0) {
-      setContador(contador - 1);
-    }
-  };
-
-  const handleAgregarCarrito = () => {
-    const productoFinal = { ...producto, cantidad: contador };
-
-    console.log(productoFinal);
-  };
+  const {contador,handleSumar,handleRestar,handleAgregarCarrito}  = useCounter({stock,producto})
 
   return (
     <>
