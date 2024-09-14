@@ -6,23 +6,24 @@ import Products from "../pages/ProductsPage/ProductsPage";
 import Product from "../pages/Product/Product";
 import Error404 from "../pages/Error404/Error404";
 import AppLayout from "./layouts/AppLayout";
+import AuthProvider from "../context/AuthProvider";
 // import Error404 from "../pages/Error404/Error404";
 
 const Routing = () => {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<AppLayout/>}>
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="products" element={<Products />} />
-          <Route path="product/:id" element={<Product />} />
-        </Route>
-
-        <Route path="*" element={<Error404 />} />
-        
-      </Routes>
+      <AuthProvider>
+            <Routes>
+              <Route path="/" element={<AppLayout />}>
+                <Route index element={<Home />} />
+                <Route path="about" element={<About />} />
+                <Route path="contact" element={<Contact />} />
+                <Route path="products" element={<Products />} />
+                <Route path="product/:id" element={<Product />} />
+              </Route>
+              <Route path="*" element={<Error404 />} />
+            </Routes>
+      </AuthProvider>
     </BrowserRouter>
   );
 };
