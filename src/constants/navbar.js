@@ -16,5 +16,9 @@ export const navlinks = [
         text:"Productos",
         path:"/products"
     },
+    {
+        text:"Usuarios",
+        path:"/users"
+    },
     
 ]

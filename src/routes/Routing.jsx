@@ -7,6 +7,8 @@ import Product from "../pages/Product/Product";
 import Error404 from "../pages/Error404/Error404";
 import AppLayout from "./layouts/AppLayout";
 import AuthProvider from "../context/AuthProvider";
+import Users from "../pages/Users/Users";
+import User from "../pages/Users/User";
 // import Error404 from "../pages/Error404/Error404";
 
 const Routing = () => {
@@ -20,6 +22,9 @@ const Routing = () => {
                 <Route path="contact" element={<Contact />} />
                 <Route path="products" element={<Products />} />
                 <Route path="product/:id" element={<Product />} />
+                <Route path="users" element={<Users />} />
+                <Route path="users/:id" element={<User />} />
+
               </Route>
               <Route path="*" element={<Error404 />} />
             </Routes>

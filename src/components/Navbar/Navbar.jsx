@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 // import React from 'react'
-import { useLocation, useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 import { navlinks } from "../../constants/navbar";
 import TextComponent from "../../shared/TextComponent/TextComponent";
 import NavItem from "./NavItem/NavItem";

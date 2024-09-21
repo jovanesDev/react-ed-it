@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import Navbar from "../components/Navbar/Navbar";
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 
 const WithNavbarAndFooter = (props) => {
   //console.log(props)
@@ -10,7 +10,7 @@ const WithNavbarAndFooter = (props) => {
       <Navbar logoText="Mi App" />
       {/* Children envuelve Componentes */}
       {children}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
