@@ -9,6 +9,7 @@ import AppLayout from "./layouts/AppLayout";
 import AuthProvider from "../context/AuthProvider";
 import Users from "../pages/Users/Users";
 import User from "../pages/Users/User";
+import ContadorRx from "../pages/ContadorRx/ContadorRx";
 // import Error404 from "../pages/Error404/Error404";
 
 const Routing = () => {
@@ -24,6 +25,7 @@ const Routing = () => {
                 <Route path="product/:id" element={<Product />} />
                 <Route path="users" element={<Users />} />
                 <Route path="users/:id" element={<User />} />
+                <Route path="counter" element={<ContadorRx />} />
 
               </Route>
               <Route path="*" element={<Error404 />} />

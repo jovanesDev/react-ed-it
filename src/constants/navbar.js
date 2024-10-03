@@ -20,5 +20,9 @@ export const navlinks = [
         text:"Usuarios",
         path:"/users"
     },
+    {
+        text:"Contador",
+        path:"/counter"
+    },
     
 ]
