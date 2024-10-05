@@ -12,7 +12,6 @@ const ContadorRx = () => {
   const { agenda, cuenta } = useSelector((store) => store.contador);
   const dispatch = useDispatch();
   const [state, setState] = useState(0);
-  console.log(state);
 
   return (
     <div style={{ display: "flex", flexDirection: "column", padding: "20px" }}>

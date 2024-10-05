@@ -7,10 +7,10 @@ import "./styles.css";
 // hook: navigate
 
 const NavItem = ({ route }) => {
-  const { text, path } = route;
+  const { text, path,darkMode } = route;
   return (
     <NavLink
-      className={({ isActive }) => (isActive ? "nav_item active" : "nav_item")}
+      //className={darkMode ? 'darkMode' : 'lightMode'}
       to={path}
     >
       {text}

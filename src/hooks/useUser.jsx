@@ -1,40 +1,23 @@
-import { useEffect, useState } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { getUserById } from "../services/users.service";
+import { useDispatch, useSelector } from "react-redux";
+
+import { fetchUserById } from "../services/users/users.thunk";
 
 const useUser = () => {
-  const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
   const { id } = useParams();
+  const { data, loading, error } = useSelector((store) => store.user)
+  const dispatch = useDispatch()
   const navigate = useNavigate();
 
   useEffect(() => {
-    const getUser = async () => {
-      setLoading(true);
-      try {
-        const response = await getUserById(id);
-        setUser(response);
-      } catch (error) {
-        setError(true);
-        setUser(null);
-        console.log(error)
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    getUser();
-
-    return () => {
-      setLoading(false);
-      setError(false);
-      setUser(null);
-    };
-  }, [id]);
+    dispatch(fetchUserById(id))
+  }, [id])
+  
 
   return {
-    user,
+    data,
     loading,
     error,
     navigate

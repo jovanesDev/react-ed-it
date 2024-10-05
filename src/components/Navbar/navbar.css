@@ -8,7 +8,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: beige;
+    /* background-color: beige; */
     padding: 20px;
 }
 
@@ -17,3 +17,16 @@ ul {
     display: flex;
     gap: 40px;
 }
+
+.dark {
+    background-color: black !important;
+    text-decoration: none !important;
+    color: white;
+}
+
+.light {
+    background-color: beige !important;
+    text-decoration: none !important;
+    color: black;
+}
+
